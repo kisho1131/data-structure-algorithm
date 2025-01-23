@@ -1,32 +1,29 @@
 class Solution {
     public long maximumSubarraySum(int[] nums, int k) {
-        int n = nums.length;
-        Set<Integer> elements = new HashSet<>();
-        long currentSum = 0;
-        long maxSum = 0;
-        int begin = 0;
-        
-        for (int end = 0; end < n; end++) {
-            if (!elements.contains(nums[end])) {
-                currentSum += nums[end];
-                elements.add(nums[end]);
-                
-                if (end - begin + 1 == k) {
-                    maxSum = Math.max(maxSum, currentSum);
-                    currentSum -= nums[begin];
-                    elements.remove(nums[begin]);
-                    begin++;
-                }
-            } else {
-                while (nums[begin] != nums[end]) {
-                    currentSum -= nums[begin];
-                    elements.remove(nums[begin]);
-                    begin++;
-                }
-                begin++;
+            long max = -1L;
+            long sum = 0;
+            int start = 0;
+            int end = 0;
+            Map<Integer, Integer> freqMap = new HashMap<>();
+            while (end < nums.length) {
+            sum += nums[end];
+            freqMap.put(nums[end], freqMap.getOrDefault(nums[end], 0) + 1);
+            if (end - start + 1 < k) {
+                end++;
             }
-        }
-        
-        return maxSum;
+                else if (end - start + 1 == k) {
+                    if (freqMap.size() == k) {
+                    max = Math.max(max, sum);
+                    }
+                    sum -= nums[start];
+                    freqMap.put(nums[start], freqMap.get(nums[start]) - 1);
+                    if (freqMap.get(nums[start]) == 0) {
+                    freqMap.remove(nums[start]);
+                    }
+                    start ++;
+                    end ++;
+                }
+            }
+            return max > 0 ? max : 0;
     }
 }
