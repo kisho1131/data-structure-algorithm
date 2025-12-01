@@ -5,6 +5,7 @@
 ## Array
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/kisho1131/dsa-leetcode/tree/master/0001-two-sum) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/kisho1131/dsa-leetcode/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0033-search-in-rotated-sorted-array](https://github.com/kisho1131/dsa-leetcode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0035-search-insert-position](https://github.com/kisho1131/dsa-leetcode/tree/master/0035-search-insert-position) |
@@ -15,6 +16,7 @@
 ## Hash Table
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/kisho1131/dsa-leetcode/tree/master/0001-two-sum) |
 | [2552-maximum-sum-of-distinct-subarrays-with-length-k](https://github.com/kisho1131/dsa-leetcode/tree/master/2552-maximum-sum-of-distinct-subarrays-with-length-k) |
 | [2561-number-of-distinct-averages](https://github.com/kisho1131/dsa-leetcode/tree/master/2561-number-of-distinct-averages) |
 ## Sliding Window
